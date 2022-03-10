@@ -30,7 +30,7 @@ const reportPost = (id) => {
 
 const displayContent = (text) => {
   return text.length < 30
-    ? 'text'
+    ? text
     : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>"
 }
 
@@ -55,7 +55,7 @@ const switchTab = (id) => {
 }
 
 const createPost = (post) => {
-  const { image, userImage  } = post
+  const { image, userImage } = post
   const div = document.createElement('article')
   div.classList.add('post')
   div.innerHTML = `
